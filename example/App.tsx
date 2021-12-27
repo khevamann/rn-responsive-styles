@@ -1,23 +1,23 @@
-import { Text, View } from 'react-native';
-import { CreateResponsiveStyle, DEVICE_SIZES } from 'rn-responsive-styles';
+import { Text, View } from 'react-native'
+import { CreateResponsiveStyle, DEVICE_SIZES } from 'rn-responsive-styles'
 
 const DEVICE_COLOR: Record<DEVICE_SIZES, string> = {
   extra_large: 'orange',
   large: 'blue',
   medium: 'green',
   small: 'red',
-};
+}
 
 export default function App() {
-  const { styles, deviceSize, layout } = useResponsiveStyle();
+  const { styles, deviceSize } = useResponsiveStyle()
 
   return (
     <View style={styles('container')}>
       <Text style={styles('text')}>Device Size: {deviceSize}</Text>
       <Text style={styles('text')}>Color: {DEVICE_COLOR[deviceSize]}</Text>
-      <Text style={styles('text')}>App is {layout.width}px wide</Text>
+      <Text style={styles('text')}>App is {deviceSize}px wide</Text>
     </View>
-  );
+  )
 }
 
 const useResponsiveStyle = CreateResponsiveStyle(
@@ -64,4 +64,4 @@ const useResponsiveStyle = CreateResponsiveStyle(
       },
     },
   },
-);
+)
