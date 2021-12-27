@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests that device sizes render appropriately tests that extra large devices render correctly: extra_large 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      Object {
+        "backgroundColor": "orange",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "white",
+          "fontSize": 30,
+        },
+        Object {
+          "color": "black",
+        },
+      ]
+    }
+  >
+    Device Size: 
+    extra_large
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "white",
+          "fontSize": 30,
+        },
+        Object {
+          "color": "black",
+        },
+      ]
+    }
+  >
+    Color: 
+    orange
+  </Text>
+</View>
+`;
+
+exports[`tests that device sizes render appropriately tests that large devices render correctly: large 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      Object {
+        "backgroundColor": "blue",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 30,
+      }
+    }
+  >
+    Device Size: 
+    large
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 30,
+      }
+    }
+  >
+    Color: 
+    blue
+  </Text>
+</View>
+`;
+
+exports[`tests that device sizes render appropriately tests that medium devices render correctly: medium 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      Object {
+        "backgroundColor": "green",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "white",
+          "fontSize": 30,
+        },
+        Object {
+          "fontSize": 20,
+        },
+      ]
+    }
+  >
+    Device Size: 
+    medium
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "white",
+          "fontSize": 30,
+        },
+        Object {
+          "fontSize": 20,
+        },
+      ]
+    }
+  >
+    Color: 
+    green
+  </Text>
+</View>
+`;
+
+exports[`tests that device sizes render appropriately tests that small devices render correctly: small 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      Object {
+        "backgroundColor": "red",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "white",
+          "fontSize": 30,
+        },
+        Object {
+          "fontSize": 20,
+        },
+      ]
+    }
+  >
+    Device Size: 
+    small
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "white",
+          "fontSize": 30,
+        },
+        Object {
+          "fontSize": 20,
+        },
+      ]
+    }
+  >
+    Color: 
+    red
+  </Text>
+</View>
+`;
