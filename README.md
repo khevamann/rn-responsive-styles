@@ -26,6 +26,9 @@ over one of the breakpoints, instead of re-rendering on every pixel change.
 or
 `npm install rn-responsive-styles --save`
 
+# Demo
+![Demo of Responsive Styles](.github/demo.gif)
+
 # Usage
 
 ```typescript jsx
