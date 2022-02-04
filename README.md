@@ -82,7 +82,8 @@ The currently configured breakpoints are:
 
 |    Size     |               Value               |      Breakpoints      |
 |:-----------:|:---------------------------------:|:---------------------:|
-|    small    |    `DEVICE_SIZES.SMALL_DEVICE`    |    `width <= 768`     |
+| extra small | `DEVICE_SIZES.EXTRA_SMALL_DEVICE` |    `width <= 540`     |
+|    small    |    `DEVICE_SIZES.SMALL_DEVICE`    | `540 < width <= 768`  |
 |   medium    |   `DEVICE_SIZES.MEDIUM_DEVICE`    | `768 < width <= 992`  |
 |    large    |    `DEVICE_SIZES.LARGE_DEVICE`    | `992 < width <= 1200` |
 | extra large | `DEVICE_SIZES.EXTRA_LARGE_DEVICE` |    `1200 < width`     |
