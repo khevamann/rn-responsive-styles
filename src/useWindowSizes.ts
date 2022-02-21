@@ -6,13 +6,13 @@ import { DEVICE_SIZES } from './types'
  * Hook to watch changes in screenSize and report the dimensions whenever the device size changes
  * @param breakpoints a function that returns the device size given a width
  */
-export default function useWindowSizes(breakpoints: (width: number) => DEVICE_SIZES) {
+export default function useWindowSizes(breakpoints: (width: number, provided_sizes:object) => DEVICE_SIZES, provided_sizes:object) {
   const [dims, setDims] = useState(() => Dimensions.get('window'))
 
   useEffect(() => {
     function handleChange({ window }: { window: ScaledSize }) {
       // Only update the dimensions when the device size changes
-      setDims((prev) => (breakpoints(prev.width) === breakpoints(window.width) ? prev : window))
+      setDims((prev) => (breakpoints(prev.width, provided_sizes) === breakpoints(window.width, provided_sizes) ? prev : window))
     }
 
     const listener = Dimensions.addEventListener('change', handleChange)
@@ -20,9 +20,7 @@ export default function useWindowSizes(breakpoints: (width: number) => DEVICE_SI
     // `addEventListener` in this handler, so we set it here. If there was
     // no change, React will filter out this update as a no-op.
     setDims(Dimensions.get('window'))
-    return () => {
-      listener.remove()
-    }
+    
   }, [])
 
   return dims
