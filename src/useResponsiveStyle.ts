@@ -8,8 +8,7 @@ const composeMultipleStyles = <Styles>(
   styles: StyleSheet.NamedStyles<any>,
   classNames: (keyof Styles)[],
 ): StyleProp<any> => {
-  // Base cases to return the style if there are not enough to require composition
-  if (classNames.length === 0) return null
+  // Base cases to return the style if there are not two for a composition
   if (classNames.length === 1) return styles[classNames[0]]
 
   // Recursively combine the rest of the styles

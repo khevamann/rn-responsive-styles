@@ -1,13 +1,13 @@
-<h1 align="center">
+<h1 style='text-align: center'>
     React Native Responsive Styles
 </h1>
 
-<p align="center">
+<p style='text-align: center'>
   <strong>rn-responsive-styles</strong><br>
-  Create responsive styles for react-native and react-native-web with minimal rerenders
+  Create responsive styles for react-native and react-native-web with minimal re-renders
 </p>
 
-<p align="center">
+<p style='text-align: center'>
     <a href="https://www.npmjs.org/package/rn-responsive-styles">
         <img src="https://img.shields.io/npm/v/rn-responsive-styles?color=brightgreen&label=npm%20package" alt="Current npm package version." />
     </a>
@@ -27,6 +27,7 @@ or
 `npm install rn-responsive-styles --save`
 
 # Demo
+
 ![Demo of Responsive Styles](.github/demo.gif)
 
 # Usage
@@ -76,7 +77,32 @@ const useStyles = CreateResponsiveStyle(
 )
 ```
 
-### Options
+### Simple Media Queries
+
+To specify styles that apply to multiple device sizes you can use the built in `minSize()` and `maxSize()` functions.
+These allow you to specify styles similar to CSS media queries `min-width` and `max-width`.
+
+```typescript jsx
+const useStyles = CreateResponsiveStyle(
+  { ... },
+  {
+    // Will apply the size 30 font to large and extra large devices
+    [minSize(DEVICE_SIZES.LARGE_DEVICE)]: {
+      text: {
+        fontSize: 30,
+      },
+    },
+    // Will apply the size 20 to medium, small and extra-small devices
+    [maxSize(DEVICE_SIZES.MEDIUM_DEVICE)]: {
+      text: {
+        fontSize: 20,
+      },
+    },
+  },
+)
+```
+
+## Options
 
 The currently configured breakpoints are:
 

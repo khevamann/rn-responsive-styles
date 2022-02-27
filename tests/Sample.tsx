@@ -25,7 +25,7 @@ const useResponsiveStyle = CreateResponsiveStyle(
   {
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: 'purple',
       alignItems: 'center',
       justifyContent: 'center',
     },
@@ -55,11 +55,6 @@ const useResponsiveStyle = CreateResponsiveStyle(
     [DEVICE_SIZES.SMALL_DEVICE]: {
       container: {
         backgroundColor: DEVICE_COLOR[DEVICE_SIZES.SMALL_DEVICE],
-      },
-    },
-    [DEVICE_SIZES.EXTRA_SMALL_DEVICE]: {
-      container: {
-        backgroundColor: DEVICE_COLOR[DEVICE_SIZES.EXTRA_SMALL_DEVICE],
       },
     },
     // Will apply the size 30 font to large and extra large devices

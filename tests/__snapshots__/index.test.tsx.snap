@@ -6,7 +6,7 @@ exports[`tests that device sizes render appropriately tests that extra large dev
     Array [
       Object {
         "alignItems": "center",
-        "backgroundColor": "#fff",
+        "backgroundColor": "purple",
         "flex": 1,
         "justifyContent": "center",
       },
@@ -21,11 +21,15 @@ exports[`tests that device sizes render appropriately tests that extra large dev
       Array [
         Object {
           "color": "white",
-          "fontSize": 30,
         },
-        Object {
-          "color": "black",
-        },
+        Array [
+          Object {
+            "color": "black",
+          },
+          Object {
+            "fontSize": 30,
+          },
+        ],
       ]
     }
   >
@@ -37,11 +41,15 @@ exports[`tests that device sizes render appropriately tests that extra large dev
       Array [
         Object {
           "color": "white",
-          "fontSize": 30,
         },
-        Object {
-          "color": "black",
-        },
+        Array [
+          Object {
+            "color": "black",
+          },
+          Object {
+            "fontSize": 30,
+          },
+        ],
       ]
     }
   >
@@ -56,7 +64,7 @@ exports[`tests that device sizes render appropriately tests that extra small dev
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "#fff",
+      "backgroundColor": "purple",
       "flex": 1,
       "justifyContent": "center",
     }
@@ -64,10 +72,14 @@ exports[`tests that device sizes render appropriately tests that extra small dev
 >
   <Text
     style={
-      Object {
-        "color": "white",
-        "fontSize": 30,
-      }
+      Array [
+        Object {
+          "color": "white",
+        },
+        Object {
+          "fontSize": 20,
+        },
+      ]
     }
   >
     Device Size: 
@@ -75,10 +87,14 @@ exports[`tests that device sizes render appropriately tests that extra small dev
   </Text>
   <Text
     style={
-      Object {
-        "color": "white",
-        "fontSize": 30,
-      }
+      Array [
+        Object {
+          "color": "white",
+        },
+        Object {
+          "fontSize": 20,
+        },
+      ]
     }
   >
     Color: 
@@ -93,7 +109,7 @@ exports[`tests that device sizes render appropriately tests that large devices r
     Array [
       Object {
         "alignItems": "center",
-        "backgroundColor": "#fff",
+        "backgroundColor": "purple",
         "flex": 1,
         "justifyContent": "center",
       },
@@ -105,10 +121,14 @@ exports[`tests that device sizes render appropriately tests that large devices r
 >
   <Text
     style={
-      Object {
-        "color": "white",
-        "fontSize": 30,
-      }
+      Array [
+        Object {
+          "color": "white",
+        },
+        Object {
+          "fontSize": 30,
+        },
+      ]
     }
   >
     Device Size: 
@@ -116,10 +136,14 @@ exports[`tests that device sizes render appropriately tests that large devices r
   </Text>
   <Text
     style={
-      Object {
-        "color": "white",
-        "fontSize": 30,
-      }
+      Array [
+        Object {
+          "color": "white",
+        },
+        Object {
+          "fontSize": 30,
+        },
+      ]
     }
   >
     Color: 
@@ -134,7 +158,7 @@ exports[`tests that device sizes render appropriately tests that medium devices 
     Array [
       Object {
         "alignItems": "center",
-        "backgroundColor": "#fff",
+        "backgroundColor": "purple",
         "flex": 1,
         "justifyContent": "center",
       },
@@ -149,7 +173,6 @@ exports[`tests that device sizes render appropriately tests that medium devices 
       Array [
         Object {
           "color": "white",
-          "fontSize": 30,
         },
         Object {
           "fontSize": 20,
@@ -165,7 +188,6 @@ exports[`tests that device sizes render appropriately tests that medium devices 
       Array [
         Object {
           "color": "white",
-          "fontSize": 30,
         },
         Object {
           "fontSize": 20,
@@ -185,7 +207,7 @@ exports[`tests that device sizes render appropriately tests that small devices r
     Array [
       Object {
         "alignItems": "center",
-        "backgroundColor": "#fff",
+        "backgroundColor": "purple",
         "flex": 1,
         "justifyContent": "center",
       },
@@ -200,7 +222,6 @@ exports[`tests that device sizes render appropriately tests that small devices r
       Array [
         Object {
           "color": "white",
-          "fontSize": 30,
         },
         Object {
           "fontSize": 20,
@@ -216,7 +237,6 @@ exports[`tests that device sizes render appropriately tests that small devices r
       Array [
         Object {
           "color": "white",
-          "fontSize": 30,
         },
         Object {
           "fontSize": 20,
