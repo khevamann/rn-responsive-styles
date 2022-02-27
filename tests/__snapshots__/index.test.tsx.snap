@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tests that device sizes render appropriately tests that extra large devices render correctly: extra_large 1`] = `
+exports[`tests that device sizes render appropriately tests that extra large devices render correctly: extralarge 1`] = `
 <View
   style={
     Array [
@@ -30,7 +30,7 @@ exports[`tests that device sizes render appropriately tests that extra large dev
     }
   >
     Device Size: 
-    extra_large
+    extralarge
   </Text>
   <Text
     style={
@@ -47,6 +47,42 @@ exports[`tests that device sizes render appropriately tests that extra large dev
   >
     Color: 
     orange
+  </Text>
+</View>
+`;
+
+exports[`tests that device sizes render appropriately tests that extra small devices render correctly: extrasmall 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 30,
+      }
+    }
+  >
+    Device Size: 
+    extrasmall
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 30,
+      }
+    }
+  >
+    Color: 
+    purple
   </Text>
 </View>
 `;

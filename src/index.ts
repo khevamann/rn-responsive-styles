@@ -1,19 +1,20 @@
-import { ImageStyle, StyleSheet, TextStyle, ViewStyle } from 'react-native';
-import useResponsiveStyle from './useResponsiveStyle';
-import { DEVICE_SIZES } from './types';
+import { ImageStyle, StyleSheet, TextStyle, ViewStyle } from 'react-native'
+import useResponsiveStyle from './useResponsiveStyle'
+import { DEVICE_SIZES } from './types'
+import { maxSize, minSize } from './helpers'
 
 function CreateResponsiveStyle<GlobalStyles, OverrideStyles extends GlobalStyles>(
   webStyles: StyleSheet.NamedStyles<GlobalStyles>,
   styleOverrides: Partial<Record<DEVICE_SIZES, StyleSheet.NamedStyles<Partial<OverrideStyles>>>>,
 ) {
-  const overrides: StyleSheet.NamedStyles<any> = {};
+  const overrides: StyleSheet.NamedStyles<any> = {}
 
   // Create custom style names based on the device overrides
   Object.entries(styleOverrides).forEach(([key, value]) => {
     Object.entries(value).forEach(([className, value2]) => {
-      overrides[`${key}_${className}`] = value2 as ViewStyle | TextStyle | ImageStyle;
-    });
-  });
+      overrides[`${key}_${className}`] = value2 as ViewStyle | TextStyle | ImageStyle
+    })
+  })
 
   // Merge the stylesheets example:
   // {
@@ -23,13 +24,13 @@ function CreateResponsiveStyle<GlobalStyles, OverrideStyles extends GlobalStyles
   //   large_container: {
   //     color: 'blue'
   //   },
-  //   small_container: {
+  //   extrasmall+small_container: {
   //     color: 'green'
   //   },
   // }
-  const styles = StyleSheet.create<StyleSheet.NamedStyles<GlobalStyles>>({ ...webStyles, ...overrides });
+  const styles = StyleSheet.create<StyleSheet.NamedStyles<GlobalStyles>>({ ...webStyles, ...overrides })
 
-  return useResponsiveStyle<GlobalStyles>(styles);
+  return useResponsiveStyle<GlobalStyles>(styles)
 }
 
-export { CreateResponsiveStyle, useResponsiveStyle, DEVICE_SIZES };
+export { CreateResponsiveStyle, useResponsiveStyle, DEVICE_SIZES, minSize, maxSize }

@@ -1,0 +1,25 @@
+name: Running Code Coverage
+
+on: [ push, pull_request ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js v14.x
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run tests
+        run: yarn coverage
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
