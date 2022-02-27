@@ -11,6 +11,9 @@
     <a href="https://www.npmjs.org/package/rn-responsive-styles">
         <img src="https://img.shields.io/npm/v/rn-responsive-styles?color=brightgreen&label=npm%20package" alt="Current npm package version." />
     </a>
+    <a href="https://codecov.io/gh/khevamann/rn-responsive-styles">
+       <img src="https://codecov.io/gh/khevamann/rn-responsive-styles/branch/main/graph/badge.svg?token=JTNKBI6SS0"/>
+    </a>
 </p>
 
 This library adds support for dynamic styling based on device size, it was built to replace inline dynamic styles for
