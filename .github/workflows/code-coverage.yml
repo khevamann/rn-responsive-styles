@@ -1,4 +1,4 @@
-name: NPM Publish
+name: Running Code Coverage
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,13 +19,10 @@ jobs:
           node-version: 14
 
       - name: Install dependencies
-        run:
-          yarn install
+        run: yarn install
 
-      - name: Build pacakge
-        run: yarn build
+      - name: Run tests
+        run: yarn coverage
 
-      - name: Publish to NPM
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
