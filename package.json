@@ -1,6 +1,6 @@
 {
   "name": "rn-responsive-styles",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "responsive styles for react-native and react-native-web",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -29,7 +29,8 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "coverage": "jest --coverage",
+    "format": "prettier --write 'src/**/*.ts'",
     "lint": "tslint -p tsconfig.json",
     "runExample": "cd example && yarn web",
     "prepare": "npm run build",
