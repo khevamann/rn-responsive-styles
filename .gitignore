@@ -17,5 +17,6 @@ web-build/
 # macOS
 .DS_Store
 
-#jest
-coverage/
+# Ignore test-related files
+/coverage.data
+/coverage/
