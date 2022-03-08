@@ -86,6 +86,8 @@ To specify styles that apply to multiple device sizes you can use the built in `
 These allow you to specify styles similar to CSS media queries `min-width` and `max-width`.
 
 ```typescript jsx
+import { CreateResponsiveStyle, DEVICE_SIZES, minSize, maxSize } from 'rn-responsive-styles'
+
 const useStyles = CreateResponsiveStyle(
   { ... },
   {
