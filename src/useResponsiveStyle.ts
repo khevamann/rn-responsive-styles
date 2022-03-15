@@ -18,7 +18,7 @@ const composeMultipleStyles = <Styles>(
 
 const getCustomStyles = <Styles>(styles: StyleSheet.NamedStyles<any>, size: DEVICE_SIZES, className: keyof Styles) => {
   // Will match any string that contains the size (in any order) followed by the style name
-  const regex = new RegExp(`(^|\\+)${size}[a-zA-Z0-9+-]*_${className}`)
+  const regex = new RegExp(`(^|\\+)${size}[a-zA-Z0-9+-]*_${className}$`)
 
   // Will get a list of all style keys that are matching either with a sie prefix or the base class
   const styleKeys = Object.keys(styles).filter((style) => style.match(regex) || style === className)
