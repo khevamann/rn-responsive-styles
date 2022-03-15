@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`additional tests for specific cases tests that regex does not include extra classes: medium 1`] = `
+<View>
+  <Text
+    style={
+      Object {
+        "fontSize": 40,
+      }
+    }
+  >
+    Open up App.tsx to start working on your app!
+  </Text>
+</View>
+`;
+
+exports[`additional tests for specific cases tests that regex only picks up the exact class specified: small 1`] = `
+<View>
+  <Text
+    style={
+      Object {
+        "fontSize": 40,
+      }
+    }
+  >
+    Open up App.tsx to start working on your app!
+  </Text>
+</View>
+`;
