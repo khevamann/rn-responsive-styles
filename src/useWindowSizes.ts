@@ -20,7 +20,9 @@ export default function useWindowSizes(breakpoints: (width: number) => DEVICE_SI
     // `addEventListener` in this handler, so we set it here. If there was
     // no change, React will filter out this update as a no-op.
     setDims(Dimensions.get('window'))
-    return listener && listener.remove
+    return () => {
+      if(listener) listener.remove();
+    }
   }, [])
 
   return dims
