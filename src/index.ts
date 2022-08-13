@@ -4,12 +4,4 @@ import { maxSize, minSize } from './helpers'
 import { BreakpointsProvider } from './provider'
 import CreateResponsiveStyle from './createResponsiveStyle'
 
-
-export {
-  CreateResponsiveStyle,
-  BreakpointsProvider,
-  useDeviceSize,
-  DEVICE_SIZES,
-  minSize,
-  maxSize,
-}
+export { CreateResponsiveStyle, BreakpointsProvider, useDeviceSize, DEVICE_SIZES, minSize, maxSize }

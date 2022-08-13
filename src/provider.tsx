@@ -1,6 +1,5 @@
 import * as React from 'react'
 
-
 export type Breakpoints = [number, number, number, number]
 
 const BreakpointsContext = React.createContext<Breakpoints>([1200, 992, 768, 540])
@@ -14,9 +13,5 @@ type Props = {
 }
 
 export function BreakpointsProvider({ children, breakpoints }: Props) {
-  return (
-    <BreakpointsContext.Provider value={breakpoints}>
-      {children}
-    </BreakpointsContext.Provider>
-  )
+  return <BreakpointsContext.Provider value={breakpoints}>{children}</BreakpointsContext.Provider>
 }

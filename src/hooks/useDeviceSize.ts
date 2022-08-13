@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
-import { Dimensions, ScaledSize } from 'react-native'
-import { deviceSize } from '../helpers'
-import { useBreakpoints } from '../provider'
+import { useEffect, useState } from "react";
+import { Dimensions, ScaledSize } from "react-native";
+import { deviceSize } from "../helpers";
+import { useBreakpoints } from "../provider";
 
 /**
  * Hook to watch changes in screenSize and report the device size whenever it changes
@@ -10,7 +10,7 @@ export default function useDeviceSize() {
   const breakpoints = useBreakpoints()
   const [dims, setDims] = useState(() => Dimensions.get('window'))
   const size = deviceSize(breakpoints)
-
+  console.log('INSIDE RENDERING')
   useEffect(() => {
     function handleChange({ window }: { window: ScaledSize }) {
       // Only update the dimensions when the device size changes

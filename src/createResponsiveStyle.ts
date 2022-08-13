@@ -5,10 +5,9 @@ import NamedStyles = StyleSheet.NamedStyles
 
 type ReturnType<GlobalStyles> = () => GlobalStyles
 
-
 function CreateResponsiveStyle<DefaultStyles extends NamedStyles<DefaultStyles>, OverrideStyles extends DefaultStyles>(
   webStyles: DefaultStyles,
-  styleOverrides?: Record<DEVICE_SIZES | MEDIA_QUERY, Partial<NamedStyles<OverrideStyles>>>,
+  styleOverrides?: Record<DEVICE_SIZES | MEDIA_QUERY, Partial<NamedStyles<OverrideStyles>>>
 ): ReturnType<DefaultStyles> {
   const overrides: StyleSheet.NamedStyles<any> = {}
 

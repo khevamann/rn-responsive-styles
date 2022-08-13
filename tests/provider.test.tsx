@@ -1,8 +1,6 @@
 import * as React from 'react'
 import { ScaledSize } from 'react-native'
-import * as renderer from 'react-test-renderer'
-
-import { cleanup } from '@testing-library/react-native'
+import { cleanup, render } from '@testing-library/react-native'
 import Sample from './Sample'
 import { BreakpointsProvider } from '../src'
 
@@ -18,26 +16,29 @@ const mockDimensions = ({ width }: Pick<ScaledSize, 'width'>) => {
 describe('tests that device sizes render appropriately', () => {
   test('tests that with breakpoints this will be a large device', () => {
     mockDimensions({ width: 414 })
-    const tree = renderer.create((
+    const tree = render(
       <BreakpointsProvider breakpoints={[500, 400, 300, 200]}>
         <Sample />
-      </BreakpointsProvider>)).toJSON()
+      </BreakpointsProvider>
+    ).toJSON()
     expect(tree).toMatchSnapshot('large')
   })
   test('tests that with breakpoints this will be a extra small device', () => {
     mockDimensions({ width: 150 })
-    const tree = renderer.create((
+    const tree = render(
       <BreakpointsProvider breakpoints={[500, 400, 300, 200]}>
         <Sample />
-      </BreakpointsProvider>)).toJSON()
+      </BreakpointsProvider>
+    ).toJSON()
     expect(tree).toMatchSnapshot('extrasmall')
   })
   test('tests that with breakpoints this will be a medium device', () => {
     mockDimensions({ width: 399 })
-    const tree = renderer.create((
+    const tree = render(
       <BreakpointsProvider breakpoints={[500, 400, 300, 200]}>
         <Sample />
-      </BreakpointsProvider>)).toJSON()
+      </BreakpointsProvider>
+    ).toJSON()
     expect(tree).toMatchSnapshot('medium')
   })
 })

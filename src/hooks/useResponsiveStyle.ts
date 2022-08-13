@@ -5,7 +5,7 @@ import { DEVICE_SIZES } from '../types'
 // Will recursively combine all the styles as StyleSheet.compose only takes two arguments
 const composeMultipleStyles = <Styles>(
   styles: StyleSheet.NamedStyles<any>,
-  classNames: (keyof Styles)[],
+  classNames: (keyof Styles)[]
 ): StyleProp<any> => {
   // Base cases to return the style if there are not two for a composition
   if (classNames.length === 1) return styles[classNames[0]]

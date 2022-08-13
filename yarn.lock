@@ -1125,9 +1125,9 @@
     "@sinonjs/commons" "^1.7.0"
 
 "@testing-library/react-native@^9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@testing-library/react-native/-/react-native-9.0.0.tgz#e9c63411e93d2e8e70d744b12aeb78c58025c5fc"
-  integrity sha512-UE3FWOsDUr+2l3Pg6JTpn2rV5uzYsxIus6ZyN1uMOTmn30bIuBBDDlWQtdWGJx92YcY4xgJA4vViCEKv7wVzJA==
+  version "9.2.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/react-native/-/react-native-9.2.0.tgz#28137b0261cfc75fea54c6461c5e90f33d0241b4"
+  integrity sha512-uimTtPAi0lvz1BJmz1dg4WS5mqmzahnJuBlpuuX0aNfiICjhhlsRM8YH2XDeAjKvGokmhshEM7EB2MeAyTCetQ==
   dependencies:
     pretty-format "^27.0.0"
 
@@ -1230,13 +1230,6 @@
   version "0.65.17"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.65.17.tgz#6bdb4cb7e60bbc7eda880120e2a78a080373dd97"
   integrity sha512-a1yykkqrnrTQJAteu0lt8gqv0PubdNzQvHH1kUOOl3y6JsK5AuqyvBaDmuw6xAYOL3vSXa43Wt+n47VTZRJd7w==
-  dependencies:
-    "@types/react" "*"
-
-"@types/react-test-renderer@^17.0.1":
-  version "17.0.1"
-  resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-17.0.1.tgz#3120f7d1c157fba9df0118dae20cb0297ee0e06b"
-  integrity sha512-3Fi2O6Zzq/f3QR9dRnlnHso9bMl7weKCviFmfF6B4LS1Uat6Hkm15k0ZAQuDz+UBq6B3+g+NM6IT2nr5QgPzCw==
   dependencies:
     "@types/react" "*"
 
@@ -4842,7 +4835,16 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.6.2:
+  version "15.8.1"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
+  integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
+  dependencies:
+    loose-envify "^1.4.0"
+    object-assign "^4.1.1"
+    react-is "^16.13.1"
+
+prop-types@^15.7.2:
   version "15.8.0"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.0.tgz#d237e624c45a9846e469f5f31117f970017ff588"
   integrity sha512-fDGekdaHh65eI3lMi5OnErU6a8Ighg2KjcjQxO7m8VHyWjcPyj5kiOgV1LQDOOOgVy3+5FgjXvdSSX7B8/5/4g==
