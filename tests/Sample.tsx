@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Text, View } from 'react-native'
-import { CreateResponsiveStyle, DEVICE_SIZES, maxSize, minSize } from '../src'
+import { CreateResponsiveStyle, DEVICE_SIZES, maxSize, minSize, useDeviceSize } from '../src'
 
 const DEVICE_COLOR: Record<DEVICE_SIZES, string> = {
   [DEVICE_SIZES.EXTRA_LARGE_DEVICE]: 'orange',
@@ -11,17 +11,18 @@ const DEVICE_COLOR: Record<DEVICE_SIZES, string> = {
 }
 
 export default function Sample() {
-  const { styles, deviceSize } = useResponsiveStyle()
+  const styles = useStyles()
+  const deviceSize = useDeviceSize()
 
   return (
-    <View style={styles('container')}>
-      <Text style={styles('text')}>Device Size: {deviceSize}</Text>
-      <Text style={styles('text')}>Color: {DEVICE_COLOR[deviceSize]}</Text>
+    <View style={styles.container}>
+      <Text style={styles.text}>Device Size: {deviceSize}</Text>
+      <Text style={styles.text}>Color: {DEVICE_COLOR[deviceSize]}</Text>
     </View>
   )
 }
 
-const useResponsiveStyle = CreateResponsiveStyle(
+const useStyles = CreateResponsiveStyle(
   {
     container: {
       flex: 1,

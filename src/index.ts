@@ -1,36 +1,7 @@
-import { ImageStyle, StyleSheet, TextStyle, ViewStyle } from 'react-native'
-import useResponsiveStyle from './useResponsiveStyle'
+import useDeviceSize from './hooks/useDeviceSize'
 import { DEVICE_SIZES } from './types'
 import { maxSize, minSize } from './helpers'
+import { BreakpointsProvider } from './provider'
+import CreateResponsiveStyle from './createResponsiveStyle'
 
-function CreateResponsiveStyle<GlobalStyles, OverrideStyles extends GlobalStyles>(
-  webStyles: StyleSheet.NamedStyles<GlobalStyles>,
-  styleOverrides: Partial<Record<DEVICE_SIZES, StyleSheet.NamedStyles<Partial<OverrideStyles>>>>,
-) {
-  const overrides: StyleSheet.NamedStyles<any> = {}
-
-  // Create custom style names based on the device overrides
-  Object.entries(styleOverrides).forEach(([key, value]) => {
-    Object.entries(value).forEach(([className, value2]) => {
-      overrides[`${key}_${className}`] = value2 as ViewStyle | TextStyle | ImageStyle
-    })
-  })
-
-  // Merge the stylesheets example:
-  // {
-  //   container: {
-  //     color: 'red'
-  //   },
-  //   large_container: {
-  //     color: 'blue'
-  //   },
-  //   extrasmall+small_container: {
-  //     color: 'green'
-  //   },
-  // }
-  const styles = StyleSheet.create<StyleSheet.NamedStyles<GlobalStyles>>({ ...webStyles, ...overrides })
-
-  return useResponsiveStyle<GlobalStyles>(styles)
-}
-
-export { CreateResponsiveStyle, useResponsiveStyle, DEVICE_SIZES, minSize, maxSize }
+export { CreateResponsiveStyle, BreakpointsProvider, useDeviceSize, DEVICE_SIZES, minSize, maxSize }

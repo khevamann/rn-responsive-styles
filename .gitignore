@@ -20,3 +20,7 @@ web-build/
 # Ignore test-related files
 /coverage.data
 /coverage/
+
+# Log files
+*.log
+package-lock.json

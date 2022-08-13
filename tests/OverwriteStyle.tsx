@@ -3,11 +3,11 @@ import { CreateResponsiveStyle, DEVICE_SIZES } from '../src'
 import { Text, View } from 'react-native'
 
 export default function OverwriteStyle() {
-  const { styles } = useStyles()
+  const styles = useStyles()
 
   return (
     <View>
-      <Text style={styles('text')}>Open up App.tsx to start working on your app!</Text>
+      <Text style={styles.text}>Open up App.tsx to start working on your app!</Text>
     </View>
   )
 }

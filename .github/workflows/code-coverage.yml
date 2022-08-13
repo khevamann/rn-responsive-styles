@@ -1,9 +1,6 @@
 name: Running Code Coverage
 
-on:
-  push:
-    branches:
-      - main
+on: [ pull_request ]
 
 jobs:
   build:
