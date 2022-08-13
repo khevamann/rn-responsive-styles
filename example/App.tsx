@@ -13,7 +13,7 @@ const DEVICE_COLOR: Record<DEVICE_SIZES, string> = {
 export default function App() {
   const styles = useStyles()
   const deviceSize = useDeviceSize()
-  console.log('RERENBDER')
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Device Size: {deviceSize}</Text>
@@ -76,5 +76,5 @@ const useStyles = CreateResponsiveStyle(
         fontSize: 20,
       },
     },
-  },
+  }
 )

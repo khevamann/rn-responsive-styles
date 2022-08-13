@@ -1,13 +1,15 @@
 import { DEVICE_SIZES, MEDIA_QUERY } from './types'
 import { ImageStyle, StyleSheet, TextStyle, ViewStyle } from 'react-native'
 import useResponsiveStyle from './hooks/useResponsiveStyle'
-import NamedStyles = StyleSheet.NamedStyles
 
 type ReturnType<GlobalStyles> = () => GlobalStyles
 
-function CreateResponsiveStyle<DefaultStyles extends NamedStyles<DefaultStyles>, OverrideStyles extends DefaultStyles>(
+function CreateResponsiveStyle<
+  DefaultStyles extends StyleSheet.NamedStyles<DefaultStyles>,
+  OverrideStyles extends DefaultStyles
+>(
   webStyles: DefaultStyles,
-  styleOverrides?: Record<DEVICE_SIZES | MEDIA_QUERY, Partial<NamedStyles<OverrideStyles>>>
+  styleOverrides?: Record<DEVICE_SIZES | MEDIA_QUERY, Partial<StyleSheet.NamedStyles<OverrideStyles>>>
 ): ReturnType<DefaultStyles> {
   const overrides: StyleSheet.NamedStyles<any> = {}
 
@@ -32,7 +34,7 @@ function CreateResponsiveStyle<DefaultStyles extends NamedStyles<DefaultStyles>,
   //     color: 'green'
   //   },
   // }
-  const styles = StyleSheet.create<StyleSheet.NamedStyles<DefaultStyles>>({ ...webStyles, ...overrides })
+  const styles = StyleSheet.create<DefaultStyles>({ ...webStyles, ...overrides })
 
   return useResponsiveStyle<DefaultStyles>(styles)
 }

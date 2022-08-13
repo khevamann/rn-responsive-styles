@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Dimensions, ScaledSize } from "react-native";
 import { deviceSize } from "../helpers";
 import { useBreakpoints } from "../provider";
@@ -9,8 +9,8 @@ import { useBreakpoints } from "../provider";
 export default function useDeviceSize() {
   const breakpoints = useBreakpoints()
   const [dims, setDims] = useState(() => Dimensions.get('window'))
-  const size = deviceSize(breakpoints)
-  console.log('INSIDE RENDERING')
+  const size = useCallback(deviceSize(breakpoints), [breakpoints])
+
   useEffect(() => {
     function handleChange({ window }: { window: ScaledSize }) {
       // Only update the dimensions when the device size changes
@@ -25,7 +25,7 @@ export default function useDeviceSize() {
     return () => {
       if (listener) listener.remove()
     }
-  }, [])
+  }, [size])
 
   return size(dims.width)
 }
