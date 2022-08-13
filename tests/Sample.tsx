@@ -14,9 +14,9 @@ export default function Sample() {
   const { styles, deviceSize } = useResponsiveStyle()
 
   return (
-    <View style={styles('container')}>
-      <Text style={styles('text')}>Device Size: {deviceSize}</Text>
-      <Text style={styles('text')}>Color: {DEVICE_COLOR[deviceSize]}</Text>
+    <View style={styles.container}>
+      <Text style={styles.text}>Device Size: {deviceSize}</Text>
+      <Text style={styles.text}>Color: {DEVICE_COLOR[deviceSize]}</Text>
     </View>
   )
 }

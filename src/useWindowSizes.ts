@@ -21,7 +21,7 @@ export default function useWindowSizes(breakpoints: (width: number) => DEVICE_SI
     // no change, React will filter out this update as a no-op.
     setDims(Dimensions.get('window'))
     return () => {
-      if(listener) listener.remove();
+      if (listener) listener.remove()
     }
   }, [])
 

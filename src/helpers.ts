@@ -1,4 +1,4 @@
-import { DEVICE_SIZES } from './types'
+import { DEVICE_SIZES, MEDIA_QUERY } from './types'
 
 // Used to determine what sizes should be included in media queries
 const sizeOrder = [
@@ -19,14 +19,14 @@ export function deviceSize(width: number) {
 }
 
 // Will include styling for all sizes equal to or larger than the size
-export function minSize(size: DEVICE_SIZES) {
+export function minSize(size: DEVICE_SIZES): MEDIA_QUERY {
   const sizeIndex = sizeOrder.indexOf(size)
   const sizeArr = sizeOrder.slice(sizeIndex)
   return sizeArr.join('+')
 }
 
 // Will include styling for all sizes equal to or smaller than the size
-export function maxSize(size: DEVICE_SIZES) {
+export function maxSize(size: DEVICE_SIZES): MEDIA_QUERY {
   const sizeIndex = sizeOrder.indexOf(size)
   const sizeArr = sizeOrder.slice(0, sizeIndex + 1)
   return sizeArr.join('+')

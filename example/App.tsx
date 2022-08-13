@@ -3,20 +3,20 @@ import { Text, View } from 'react-native'
 import { CreateResponsiveStyle, DEVICE_SIZES, maxSize, minSize } from 'rn-responsive-styles'
 
 const DEVICE_COLOR: Record<DEVICE_SIZES, string> = {
-  [DEVICE_SIZES.EXTRA_LARGE_DEVICE]: 'orange',
-  [DEVICE_SIZES.LARGE_DEVICE]: 'blue',
-  [DEVICE_SIZES.MEDIUM_DEVICE]: 'green',
-  [DEVICE_SIZES.SMALL_DEVICE]: 'red',
-  [DEVICE_SIZES.EXTRA_SMALL_DEVICE]: 'purple',
+  [DEVICE_SIZES.XL]: 'orange',
+  [DEVICE_SIZES.LG]: 'blue',
+  [DEVICE_SIZES.MD]: 'green',
+  [DEVICE_SIZES.SM]: 'red',
+  [DEVICE_SIZES.XS]: 'purple',
 }
 
 export default function App() {
   const { styles, deviceSize } = useResponsiveStyle()
 
   return (
-    <View style={styles('container')}>
-      <Text style={styles('text')}>Device Size: {deviceSize}</Text>
-      <Text style={styles('text')}>Color: {DEVICE_COLOR[deviceSize]}</Text>
+    <View style={styles.container}>
+      <Text style={styles.text}>Device Size: {deviceSize}</Text>
+      <Text style={styles.text}>Color: {DEVICE_COLOR[deviceSize]}</Text>
     </View>
   )
 }
@@ -30,46 +30,47 @@ const useResponsiveStyle = CreateResponsiveStyle(
       justifyContent: 'center',
     },
     text: {
+      alignItems: 'center',
       color: 'white',
     },
   },
   {
-    [DEVICE_SIZES.EXTRA_LARGE_DEVICE]: {
+    [DEVICE_SIZES.XL]: {
       container: {
-        backgroundColor: DEVICE_COLOR[DEVICE_SIZES.EXTRA_LARGE_DEVICE],
+        backgroundColor: DEVICE_COLOR[DEVICE_SIZES.XL],
       },
       text: {
         color: 'black',
       },
     },
-    [DEVICE_SIZES.LARGE_DEVICE]: {
+    [DEVICE_SIZES.LG]: {
       container: {
-        backgroundColor: DEVICE_COLOR[DEVICE_SIZES.LARGE_DEVICE],
+        backgroundColor: DEVICE_COLOR[DEVICE_SIZES.LG],
       },
     },
-    [DEVICE_SIZES.MEDIUM_DEVICE]: {
+    [DEVICE_SIZES.MD]: {
       container: {
-        backgroundColor: DEVICE_COLOR[DEVICE_SIZES.MEDIUM_DEVICE],
+        backgroundColor: DEVICE_COLOR[DEVICE_SIZES.MD],
       },
     },
-    [DEVICE_SIZES.SMALL_DEVICE]: {
+    [DEVICE_SIZES.SM]: {
       container: {
-        backgroundColor: DEVICE_COLOR[DEVICE_SIZES.SMALL_DEVICE],
+        backgroundColor: DEVICE_COLOR[DEVICE_SIZES.SM],
       },
     },
-    [DEVICE_SIZES.EXTRA_SMALL_DEVICE]: {
+    [DEVICE_SIZES.XS]: {
       container: {
-        backgroundColor: DEVICE_COLOR[DEVICE_SIZES.EXTRA_SMALL_DEVICE],
+        backgroundColor: DEVICE_COLOR[DEVICE_SIZES.XS],
       },
     },
     // Will apply the size 30 font to large and extra large devices
-    [minSize(DEVICE_SIZES.LARGE_DEVICE)]: {
+    [minSize(DEVICE_SIZES.LG)]: {
       text: {
         fontSize: 30,
       },
     },
     // Will apply the size 20 to medium, small and extra-small devices
-    [maxSize(DEVICE_SIZES.MEDIUM_DEVICE)]: {
+    [maxSize(DEVICE_SIZES.MD)]: {
       text: {
         fontSize: 20,
       },

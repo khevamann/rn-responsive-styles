@@ -7,7 +7,7 @@ export default function OverwriteStyle() {
 
   return (
     <View>
-      <Text style={styles('text')}>Open up App.tsx to start working on your app!</Text>
+      <Text style={styles.text}>Open up App.tsx to start working on your app!</Text>
     </View>
   )
 }

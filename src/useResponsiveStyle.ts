@@ -16,17 +16,25 @@ const composeMultipleStyles = <Styles>(
   return StyleSheet.compose(styles[classNames[0]], nextIteration)
 }
 
-const getCustomStyles = <Styles>(styles: StyleSheet.NamedStyles<any>, size: DEVICE_SIZES, className: keyof Styles) => {
-  // Will match any string that contains the size (in any order) followed by the style name
-  const regex = new RegExp(`(^|\\+)${size}[a-zA-Z0-9+-]*_${className}$`)
+const buildCustomStyleMap = <Styles>(styles: StyleSheet.NamedStyles<any>, size: DEVICE_SIZES) => {
+  const styleObj: StyleProp<any> = {}
 
-  // Will get a list of all style keys that are matching either with a sie prefix or the base class
-  const styleKeys = Object.keys(styles).filter((style) => style.match(regex) || style === className)
+  // Will match any string that contains the sizes (in any order) followed by the class name
+  const matchOverrides = (defaultClass: string) =>
+    new RegExp(`(^\\$\\$|.*\\+)${size}[a-zA-Z0-9+-]*\\$\\$_${defaultClass}$`)
 
-  if (styleKeys.length === 0) return null
+  // Will get a list the base styles excluding all overrides
+  const defaultKeys = Object.keys(styles).filter((style) => !style.startsWith('$$'))
 
-  // Will merge the styles given the key constraints defined above
-  return composeMultipleStyles(styles, styleKeys)
+  defaultKeys.forEach((key) => {
+    // Get all overrides for a certain class
+    const styleOverrides = Object.keys(styles).filter((style) => style.match(matchOverrides(key)))
+
+    // Combine the base style and any overrides to get the computed style
+    styleObj[key] = composeMultipleStyles(styles, [key, ...styleOverrides])
+  })
+
+  return styleObj
 }
 
 export default function useResponsiveStyle<Styles>(styles: StyleSheet.NamedStyles<any>) {
@@ -35,7 +43,7 @@ export default function useResponsiveStyle<Styles>(styles: StyleSheet.NamedStyle
     const size = deviceSize(layout.width)
 
     return {
-      styles: (style: keyof Styles) => getCustomStyles<Styles>(styles, size, style),
+      styles: buildCustomStyleMap(styles, size),
       deviceSize: size,
     }
   }
