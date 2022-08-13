@@ -1,18 +1,20 @@
 import { useEffect, useState } from 'react'
 import { Dimensions, ScaledSize } from 'react-native'
-import { DEVICE_SIZES } from './types'
+import { deviceSize } from '../helpers'
+import { useBreakpoints } from '../provider'
 
 /**
- * Hook to watch changes in screenSize and report the dimensions whenever the device size changes
- * @param breakpoints a function that returns the device size given a width
+ * Hook to watch changes in screenSize and report the device size whenever it changes
  */
-export default function useWindowSizes(breakpoints: (width: number) => DEVICE_SIZES) {
+export default function useDeviceSize() {
+  const breakpoints = useBreakpoints()
   const [dims, setDims] = useState(() => Dimensions.get('window'))
+  const size = deviceSize(breakpoints)
 
   useEffect(() => {
     function handleChange({ window }: { window: ScaledSize }) {
       // Only update the dimensions when the device size changes
-      setDims((prev) => (breakpoints(prev.width) === breakpoints(window.width) ? prev : window))
+      setDims((prev) => (size(prev.width) === size(window.width) ? prev : window))
     }
 
     const listener = Dimensions.addEventListener('change', handleChange)
@@ -25,5 +27,5 @@ export default function useWindowSizes(breakpoints: (width: number) => DEVICE_SI
     }
   }, [])
 
-  return dims
+  return size(dims.width)
 }

@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests that device sizes render appropriately tests that with breakpoints this will be a extra small device: extrasmall 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "purple",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "white",
+        },
+        Object {
+          "fontSize": 20,
+        },
+      ]
+    }
+  >
+    Device Size: 
+    extrasmall
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "white",
+        },
+        Object {
+          "fontSize": 20,
+        },
+      ]
+    }
+  >
+    Color: 
+    purple
+  </Text>
+</View>
+`;
+
+exports[`tests that device sizes render appropriately tests that with breakpoints this will be a large device: large 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "purple",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      Object {
+        "backgroundColor": "blue",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "white",
+        },
+        Object {
+          "fontSize": 30,
+        },
+      ]
+    }
+  >
+    Device Size: 
+    large
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "white",
+        },
+        Object {
+          "fontSize": 30,
+        },
+      ]
+    }
+  >
+    Color: 
+    blue
+  </Text>
+</View>
+`;
+
+exports[`tests that device sizes render appropriately tests that with breakpoints this will be a medium device: medium 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "purple",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      Object {
+        "backgroundColor": "green",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "white",
+        },
+        Object {
+          "fontSize": 20,
+        },
+      ]
+    }
+  >
+    Device Size: 
+    medium
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "white",
+        },
+        Object {
+          "fontSize": 20,
+        },
+      ]
+    }
+  >
+    Color: 
+    green
+  </Text>
+</View>
+`;

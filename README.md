@@ -12,7 +12,7 @@
         <img src="https://img.shields.io/npm/v/rn-responsive-styles?color=brightgreen&label=npm%20package" alt="Current npm package version." />
     </a>
     <a href="https://codecov.io/gh/khevamann/rn-responsive-styles">
-       <img src="https://codecov.io/gh/khevamann/rn-responsive-styles/branch/main/graph/badge.svg?token=JTNKBI6SS0"/>
+       <img src="https://codecov.io/gh/khevamann/rn-responsive-styles/branch/main/graph/badge.svg?token=JTNKBI6SS0" alt='Code coverage badge'/>
     </a>
 </p>
 
@@ -107,7 +107,7 @@ const useStyles = CreateResponsiveStyle(
 )
 ```
 
-## Options
+## Breakpoints
 
 The currently configured breakpoints are:
 
@@ -119,4 +119,20 @@ The currently configured breakpoints are:
 |    large    |    `DEVICE_SIZES.LARGE_DEVICE`    | `DEVICE_SIZES.LG` | `992 < width <= 1200` |
 | extra large | `DEVICE_SIZES.EXTRA_LARGE_DEVICE` | `DEVICE_SIZES.XL` |    `1200 < width`     |
 
-Right now there is no way to customize the breakpoint values, but I plan on adding that in the future.
+### Customizing Breakpoints
+
+If you would like to change the breakpoints you can wrap your entire app in the `BreakpointsProvider` this will allow
+you to specify exactly when styles will come into effect. This is optional and only required for finer control over
+styling different device sizes.
+
+```tsx
+import { BreakpointsProvider } from 'rn-responsive-styles'
+
+export default function App() {
+  return (
+    <BreakpointsProvider breakpoints={[1200, 992, 768, 540]}>
+      <Component />
+    </BreakpointsProvider>
+  )
+}
+```

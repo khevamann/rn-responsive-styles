@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Text, View } from 'react-native'
-import { CreateResponsiveStyle, DEVICE_SIZES, maxSize, minSize } from 'rn-responsive-styles'
+import { CreateResponsiveStyle, DEVICE_SIZES, maxSize, minSize, useDeviceSize } from 'rn-responsive-styles'
 
 const DEVICE_COLOR: Record<DEVICE_SIZES, string> = {
   [DEVICE_SIZES.XL]: 'orange',
@@ -11,8 +11,9 @@ const DEVICE_COLOR: Record<DEVICE_SIZES, string> = {
 }
 
 export default function App() {
-  const { styles, deviceSize } = useResponsiveStyle()
-
+  const styles = useStyles()
+  const deviceSize = useDeviceSize()
+  console.log('RERENBDER')
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Device Size: {deviceSize}</Text>
@@ -21,7 +22,7 @@ export default function App() {
   )
 }
 
-const useResponsiveStyle = CreateResponsiveStyle(
+const useStyles = CreateResponsiveStyle(
   {
     container: {
       flex: 1,

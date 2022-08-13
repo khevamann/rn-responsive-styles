@@ -1,7 +1,6 @@
 // jest.config.js
-const { defaults: tsjPreset } = require('ts-jest/presets')
-
 module.exports = {
+  testEnvironment: 'jsdom',
   preset: 'react-native',
   globals: {
     'ts-jest': {

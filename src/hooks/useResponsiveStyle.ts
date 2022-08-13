@@ -1,7 +1,6 @@
 import { StyleProp, StyleSheet } from 'react-native'
-import { deviceSize } from './helpers'
-import useWindowSizes from './useWindowSizes'
-import { DEVICE_SIZES } from './types'
+import useDeviceSize from './useDeviceSize'
+import { DEVICE_SIZES } from '../types'
 
 // Will recursively combine all the styles as StyleSheet.compose only takes two arguments
 const composeMultipleStyles = <Styles>(
@@ -39,12 +38,8 @@ const buildCustomStyleMap = <Styles>(styles: StyleSheet.NamedStyles<any>, size: 
 
 export default function useResponsiveStyle<Styles>(styles: StyleSheet.NamedStyles<any>) {
   return () => {
-    const layout = useWindowSizes(deviceSize)
-    const size = deviceSize(layout.width)
+    const size = useDeviceSize()
 
-    return {
-      styles: buildCustomStyleMap(styles, size),
-      deviceSize: size,
-    }
+    return buildCustomStyleMap(styles, size)
   }
 }

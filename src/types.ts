@@ -6,6 +6,7 @@ export enum DEVICE_SIZES {
   MEDIUM_DEVICE = 'medium',
   LARGE_DEVICE = 'large',
   EXTRA_LARGE_DEVICE = 'extralarge',
+  
   // Device shorthands
   XS = 'extrasmall',
   SM = 'small',

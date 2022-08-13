@@ -3,7 +3,7 @@ import { CreateResponsiveStyle, DEVICE_SIZES } from '../src'
 import { Text, View } from 'react-native'
 
 export default function OverwriteStyle() {
-  const { styles } = useStyles()
+  const styles = useStyles()
 
   return (
     <View>

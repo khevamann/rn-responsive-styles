@@ -10,12 +10,14 @@ const sizeOrder = [
 ]
 
 // Default breakpoint sizes
-export function deviceSize(width: number) {
-  if (width > 1200) return DEVICE_SIZES.EXTRA_LARGE_DEVICE
-  if (width > 992) return DEVICE_SIZES.LARGE_DEVICE
-  if (width > 768) return DEVICE_SIZES.MEDIUM_DEVICE
-  if (width > 540) return DEVICE_SIZES.SMALL_DEVICE
-  return DEVICE_SIZES.EXTRA_SMALL_DEVICE
+export function deviceSize(breakpoints: number[]) {
+  return (width: number) => {
+    if (width > breakpoints[0]) return DEVICE_SIZES.EXTRA_LARGE_DEVICE
+    if (width > breakpoints[1]) return DEVICE_SIZES.LARGE_DEVICE
+    if (width > breakpoints[2]) return DEVICE_SIZES.MEDIUM_DEVICE
+    if (width > breakpoints[3]) return DEVICE_SIZES.SMALL_DEVICE
+    return DEVICE_SIZES.EXTRA_SMALL_DEVICE
+  }
 }
 
 // Will include styling for all sizes equal to or larger than the size
