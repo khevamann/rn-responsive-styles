@@ -43,8 +43,8 @@ export default function App() {
   const { styles, deviceSize } = useStyles()
 
   return (
-    <View style={styles('container')}>
-      <Text style={styles('text')}>Device Size: {deviceSize}</Text>
+    <View style={styles.container}>
+      <Text style={styles.text}>Device Size: {deviceSize}</Text>
     </View>
   )
 }
@@ -111,12 +111,12 @@ const useStyles = CreateResponsiveStyle(
 
 The currently configured breakpoints are:
 
-|    Size     |               Value               |      Breakpoints      |
-|:-----------:|:---------------------------------:|:---------------------:|
-| extra small | `DEVICE_SIZES.EXTRA_SMALL_DEVICE` |    `width <= 540`     |
-|    small    |    `DEVICE_SIZES.SMALL_DEVICE`    | `540 < width <= 768`  |
-|   medium    |   `DEVICE_SIZES.MEDIUM_DEVICE`    | `768 < width <= 992`  |
-|    large    |    `DEVICE_SIZES.LARGE_DEVICE`    | `992 < width <= 1200` |
-| extra large | `DEVICE_SIZES.EXTRA_LARGE_DEVICE` |    `1200 < width`     |
+|    Size     |               Value               |     Shorthand     |      Breakpoints      |
+|:-----------:|:---------------------------------:|:-----------------:|:---------------------:|
+| extra small | `DEVICE_SIZES.EXTRA_SMALL_DEVICE` | `DEVICE_SIZES.XS` |    `width <= 540`     |
+|    small    |    `DEVICE_SIZES.SMALL_DEVICE`    | `DEVICE_SIZES.SM` | `540 < width <= 768`  |
+|   medium    |   `DEVICE_SIZES.MEDIUM_DEVICE`    | `DEVICE_SIZES.MD` | `768 < width <= 992`  |
+|    large    |    `DEVICE_SIZES.LARGE_DEVICE`    | `DEVICE_SIZES.LG` | `992 < width <= 1200` |
+| extra large | `DEVICE_SIZES.EXTRA_LARGE_DEVICE` | `DEVICE_SIZES.XL` |    `1200 < width`     |
 
 Right now there is no way to customize the breakpoint values, but I plan on adding that in the future.
