@@ -37,10 +37,11 @@ or
 
 ```typescript jsx
 import { Text, View } from 'react-native'
-import { CreateResponsiveStyle, DEVICE_SIZES } from 'rn-responsive-styles'
+import { CreateResponsiveStyle, DEVICE_SIZES, useDeviceSize } from 'rn-responsive-styles'
 
 export default function App() {
-  const { styles, deviceSize } = useStyles()
+  const styles = useStyles()
+  const deviceSize = useDeviceSize()
 
   return (
     <View style={styles.container}>
