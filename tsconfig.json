@@ -2,12 +2,10 @@
   "compilerOptions": {
     "target": "es6",
     "jsx": "react",
-    "module": "commonjs",
     "skipLibCheck": true,
     "declaration": true,
     "outDir": "./lib",
     "strict": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "tests"]
 }
