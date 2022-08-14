@@ -23,6 +23,21 @@ This library builds a single stylesheet from the provided styles and conditional
 uses a custom version of React Native's `useWindowDimensions` so that it only re-renders when the device size passes
 over one of the breakpoints, instead of re-rendering on every pixel change.
 
+# Upgrading to V2
+
+V2 provides some very useful features like advanced typechecking as well as a more familiar syntax. Instead of using
+functions to call styles, you can simply call them the same way you would normally. This means to gradually adopt this
+library it is as simple as replacing `const styles = Stylesheet.create` with `const useStyles = CreateResponsiveStyles`
+and adding `const styles = useStyles()` inside your component. With this update typechecking will now verify that styles
+are used for appropriate components and that no css only styles are used. In addition, there is support for custom
+breakpoints.
+
+**To upgrade:**
+
+1) Replace `const { styles } = useStyles()` with `const styles = useStyles()`
+2) Replace all styling calls from `styles('container)` to `styles.container`
+3) If you have been using `deviceSize` it is now a standalone hook `const deviceSize = useDeviceSize()`
+
 # Installation
 
 `yarn add rn-responsive-styles`
@@ -64,12 +79,12 @@ const useStyles = CreateResponsiveStyle(
     },
   },
   {
-    [DEVICE_SIZES.EXTRA_LARGE_DEVICE]: {
+    [DEVICE_SIZES.XL]: {
       container: {
         backgroundColor: 'blue',
       },
     },
-    [DEVICE_SIZES.SMALL_DEVICE]: {
+    [DEVICE_SIZES.SM]: {
       container: {
         backgroundColor: 'red',
       },
@@ -93,13 +108,13 @@ const useStyles = CreateResponsiveStyle(
   { ... },
   {
     // Will apply the size 30 font to large and extra large devices
-    [minSize(DEVICE_SIZES.LARGE_DEVICE)]: {
+    [minSize(DEVICE_SIZES.LG)]: {
       text: {
         fontSize: 30,
       },
     },
     // Will apply the size 20 to medium, small and extra-small devices
-    [maxSize(DEVICE_SIZES.MEDIUM_DEVICE)]: {
+    [maxSize(DEVICE_SIZES.MD)]: {
       text: {
         fontSize: 20,
       },
