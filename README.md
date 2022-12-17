@@ -155,7 +155,7 @@ export default function App() {
 
 ## Support for Next.js
 
-:sparkles:Available in 2.2.0:sparkles:
+:sparkles:Available in 2.1.0:sparkles:
 
 NextJS provides server-side-rendering (SSR) for react-native-web projects. This library supports that by delaying
 rendering until it has reached the client, this is a similar approach used by many other packages, as there is no way to
