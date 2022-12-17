@@ -5,7 +5,8 @@
     "skipLibCheck": true,
     "declaration": true,
     "outDir": "./lib",
-    "strict": true
+    "strict": true,
+    "moduleResolution": "node"
   },
-  "include": ["src"],
+  "include": ["src"]
 }

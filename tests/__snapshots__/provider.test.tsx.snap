@@ -1,5 +1,99 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`tests that SSR works correctly tests that SSR will not block on iOS 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "purple",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "white",
+        },
+        Object {
+          "fontSize": 20,
+        },
+      ]
+    }
+  >
+    Device Size: 
+    extrasmall
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "white",
+        },
+        Object {
+          "fontSize": 20,
+        },
+      ]
+    }
+  >
+    Color: 
+    purple
+  </Text>
+</View>
+`;
+
+exports[`tests that SSR works correctly tests that SSR will not block on web 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "purple",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "white",
+        },
+        Object {
+          "fontSize": 20,
+        },
+      ]
+    }
+  >
+    Device Size: 
+    extrasmall
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "white",
+        },
+        Object {
+          "fontSize": 20,
+        },
+      ]
+    }
+  >
+    Color: 
+    purple
+  </Text>
+</View>
+`;
+
+exports[`tests that SSR works correctly tests that SSR will show loading while rendering on the server 1`] = `
+<Text>
+  Loading...
+</Text>
+`;
+
 exports[`tests that device sizes render appropriately tests that with breakpoints this will be a extra small device: extrasmall 1`] = `
 <View
   style={
