@@ -34,9 +34,9 @@ breakpoints.
 
 **To upgrade:**
 
-1) Replace `const { styles } = useStyles()` with `const styles = useStyles()`
-2) Replace all styling calls from `styles('container)` to `styles.container`
-3) If you have been using `deviceSize` it is now a standalone hook `const deviceSize = useDeviceSize()`
+1. Replace `const { styles } = useStyles()` with `const styles = useStyles()`
+2. Replace all styling calls from `styles('container)` to `styles.container`
+3. If you have been using `deviceSize` it is now a standalone hook `const deviceSize = useDeviceSize()`
 
 # Installation
 
@@ -92,7 +92,7 @@ const useStyles = CreateResponsiveStyle(
         fontSize: 20,
       },
     },
-  },
+  }
 )
 ```
 
@@ -152,3 +152,27 @@ export default function App() {
   )
 }
 ```
+
+## Support for Next.js
+
+:sparkles:Available in 2.2.0:sparkles:
+NextJS provides server-side-rendering (SSR) for react-native-web projects. This library supports that by delaying
+rendering until it has reached the client, this is a similar approach used by many other packages, as there is no way to
+know the device size in the server, so responsive styles are meaningless. In order to support SSR you must add this
+provider to your component that imports any component relying on `rn-responsive-styles`. The best way to do this is in
+your App.tsx or index.tsx file add the `SSRProvider`
+
+```tsx
+import { ActivityIndicator } from 'react-native'
+import { SSRProvider } from 'rn-responsive-styles'
+
+export default function App() {
+  return (
+    <SSRProvider placeholder={<ActivityIndicator />}>
+      <Component />
+    </SSRProvider>
+  )
+}
+```
+
+* You can see the full example in the nexpo-example directory

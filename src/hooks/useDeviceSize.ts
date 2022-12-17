@@ -1,7 +1,7 @@
-import { useCallback, useEffect, useState } from "react";
-import { Dimensions, ScaledSize } from "react-native";
-import { deviceSize } from "../helpers";
-import { useBreakpoints } from "../provider";
+import { useCallback, useEffect, useState } from 'react'
+import { Dimensions, ScaledSize } from 'react-native'
+import { deviceSize } from '../helpers'
+import { useBreakpoints } from '../providers/BreakpointsProvider'
 
 /**
  * Hook to watch changes in screenSize and report the device size whenever it changes

@@ -1,6 +1,6 @@
 {
   "name": "rn-responsive-styles",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "responsive styles for react-native and react-native-web",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
