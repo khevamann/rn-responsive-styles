@@ -1,6 +1,6 @@
 import { ActivityIndicator } from 'react-native'
 import Home from './home'
-import { SSRProvider } from '../../src'
+import { SSRProvider } from 'rn-responsive-styles'
 
 export default function App() {
   return (

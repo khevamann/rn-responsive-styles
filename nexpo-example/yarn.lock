@@ -338,10 +338,10 @@ regenerator-runtime@^0.13.11:
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz#f6dca3e7ceec20590d07ada785636a90cdca17f9"
   integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
 
-rn-responsive-styles@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/rn-responsive-styles/-/rn-responsive-styles-2.0.1.tgz#333d8dc4d5d94c754d1ceb57304b6384c3605636"
-  integrity sha512-S9gPsrkrekfPRoAnBzFT5zQrBMDKURYrR1STEy293w8L6Pw6g41vMUXkG2wbnYpWz7KMsCSXtxRIncXq5/yhaQ==
+rn-responsive-styles@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/rn-responsive-styles/-/rn-responsive-styles-2.1.0.tgz#ebf878e92a0dc8d777d606ac44186c6dc048aa71"
+  integrity sha512-9S+sJ9XKSklbLgsaAAxqX2hmsCFr5wh+lzqoqlqzB1fFJtDLp2N96K6EyYbKGY+pCDyyGAh9K4Eqv1klxSGsyg==
 
 scheduler@^0.23.0:
   version "0.23.0"
