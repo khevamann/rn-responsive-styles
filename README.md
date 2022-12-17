@@ -23,21 +23,6 @@ This library builds a single stylesheet from the provided styles and conditional
 uses a custom version of React Native's `useWindowDimensions` so that it only re-renders when the device size passes
 over one of the breakpoints, instead of re-rendering on every pixel change.
 
-# Upgrading to V2
-
-V2 provides some very useful features like advanced typechecking as well as a more familiar syntax. Instead of using
-functions to call styles, you can simply call them the same way you would normally. This means to gradually adopt this
-library it is as simple as replacing `const styles = Stylesheet.create` with `const useStyles = CreateResponsiveStyles`
-and adding `const styles = useStyles()` inside your component. With this update typechecking will now verify that styles
-are used for appropriate components and that no css only styles are used. In addition, there is support for custom
-breakpoints.
-
-**To upgrade:**
-
-1. Replace `const { styles } = useStyles()` with `const styles = useStyles()`
-2. Replace all styling calls from `styles('container)` to `styles.container`
-3. If you have been using `deviceSize` it is now a standalone hook `const deviceSize = useDeviceSize()`
-
 # Installation
 
 `yarn add rn-responsive-styles`
@@ -177,3 +162,20 @@ export default function App() {
 ```
 
 * You can see the full example in the nexpo-example directory
+
+
+# Upgrading to V2 (from V1)
+
+V2 provides some very useful features like advanced typechecking as well as a more familiar syntax. Instead of using
+functions to call styles, you can simply call them the same way you would normally. This means to gradually adopt this
+library it is as simple as replacing `const styles = Stylesheet.create` with `const useStyles = CreateResponsiveStyles`
+and adding `const styles = useStyles()` inside your component. With this update typechecking will now verify that styles
+are used for appropriate components and that no css only styles are used. In addition, there is support for custom
+breakpoints.
+
+**To upgrade:**
+
+1. Replace `const { styles } = useStyles()` with `const styles = useStyles()`
+2. Replace all styling calls from `styles('container)` to `styles.container`
+3. If you have been using `deviceSize` it is now a standalone hook `const deviceSize = useDeviceSize()`
+
