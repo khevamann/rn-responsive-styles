@@ -26,9 +26,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html style={{ height: '100%' }}>
-        <Head>
-          <title>rn-responsive-styles Nexpo Example</title>
-        </Head>
+        <Head></Head>
         <body style={{ height: '100%', overflow: 'hidden' }}>
           <Main />
           <NextScript />
