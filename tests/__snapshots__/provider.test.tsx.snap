@@ -41,6 +41,9 @@ exports[`tests that SSR works correctly tests that SSR will not block on iOS 1`]
     Color: 
     purple
   </Text>
+  <Text>
+    Only rendered for devices smaller than medium
+  </Text>
 </View>
 `;
 
@@ -84,6 +87,9 @@ exports[`tests that SSR works correctly tests that SSR will not block on web 1`]
   >
     Color: 
     purple
+  </Text>
+  <Text>
+    Only rendered for devices smaller than medium
   </Text>
 </View>
 `;
@@ -135,6 +141,9 @@ exports[`tests that device sizes render appropriately tests that with breakpoint
     Color: 
     purple
   </Text>
+  <Text>
+    Only rendered for devices smaller than medium
+  </Text>
 </View>
 `;
 
@@ -184,6 +193,9 @@ exports[`tests that device sizes render appropriately tests that with breakpoint
     Color: 
     blue
   </Text>
+  <Text>
+    Only rendered for devices larger than medium
+  </Text>
 </View>
 `;
 
@@ -232,6 +244,9 @@ exports[`tests that device sizes render appropriately tests that with breakpoint
   >
     Color: 
     green
+  </Text>
+  <Text>
+    Only rendered for medium devices
   </Text>
 </View>
 `;
