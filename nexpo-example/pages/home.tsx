@@ -8,7 +8,7 @@ export default function Home() {
     <View>
       <Text
         style={styles.link}
-        //@ts-ignore
+        // @ts-expect-error: href does not exist on Text attribute
         href={`/alternate`}
       >
         A universal link

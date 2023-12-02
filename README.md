@@ -108,6 +108,33 @@ const useStyles = CreateResponsiveStyle(
 )
 ```
 
+## Using Media Queries for Conditional Rendering
+
+`useSizeRender` is a custom hook provided to facilitate conditional rendering based on the device size. It returns three
+helper functions: isSmallerThan, isLargerThan, and isSize, which can be used to determine if the current device size is
+smaller than, larger than, or equal to a specified size. This allows you to add performant conditional rendering that will
+only trigger a re-render when the device size changes.
+
+```tsx
+import React from 'react'
+import { Text, View } from 'react-native'
+import { useSizeRender, DEVICE_SIZES } from 'rn-responsive-styles'
+
+export default function Sample() {
+  const styles = useStyles()
+  const { isLargerThan, isSmallerThan, isSize } = useSizeRender()
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>Device Size: {useDeviceSize()}</Text>
+      {isLargerThan(DEVICE_SIZES.MD) && <Text>Only rendered for devices larger than medium</Text>}
+      {isSize(DEVICE_SIZES.MD) && <Text>Only rendered for medium devices</Text>}
+      {isSmallerThan(DEVICE_SIZES.MD) && <Text>Only rendered for devices smaller than medium</Text>}
+    </View>
+  )
+}
+```
+
 ## Breakpoints
 
 The currently configured breakpoints are:

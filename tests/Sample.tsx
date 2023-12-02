@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Text, View } from 'react-native'
-import { CreateResponsiveStyle, DEVICE_SIZES, maxSize, minSize, useDeviceSize } from '../src'
+import { CreateResponsiveStyle, DEVICE_SIZES, maxSize, minSize, useDeviceSize, useSizeRender } from '../src'
 
 const DEVICE_COLOR: Record<DEVICE_SIZES, string> = {
   [DEVICE_SIZES.EXTRA_LARGE_DEVICE]: 'orange',
@@ -13,11 +13,15 @@ const DEVICE_COLOR: Record<DEVICE_SIZES, string> = {
 export default function Sample() {
   const styles = useStyles()
   const deviceSize = useDeviceSize()
+  const { isLargerThan, isSmallerThan, isSize } = useSizeRender()
 
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Device Size: {deviceSize}</Text>
       <Text style={styles.text}>Color: {DEVICE_COLOR[deviceSize]}</Text>
+      {isLargerThan(DEVICE_SIZES.MD) && <Text>Only rendered for devices larger than medium</Text>}
+      {isSize(DEVICE_SIZES.MD) && <Text>Only rendered for medium devices</Text>}
+      {isSmallerThan(DEVICE_SIZES.MD) && <Text>Only rendered for devices smaller than medium</Text>}
     </View>
   )
 }
@@ -70,5 +74,5 @@ const useStyles = CreateResponsiveStyle(
         fontSize: 20,
       },
     },
-  },
+  }
 )
