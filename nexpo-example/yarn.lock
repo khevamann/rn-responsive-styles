@@ -3510,9 +3510,9 @@ rimraf@~2.6.2:
     glob "^7.1.3"
 
 rn-responsive-styles@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/rn-responsive-styles/-/rn-responsive-styles-2.1.0.tgz#ebf878e92a0dc8d777d606ac44186c6dc048aa71"
-  integrity sha512-9S+sJ9XKSklbLgsaAAxqX2hmsCFr5wh+lzqoqlqzB1fFJtDLp2N96K6EyYbKGY+pCDyyGAh9K4Eqv1klxSGsyg==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/rn-responsive-styles/-/rn-responsive-styles-2.2.0.tgz#726cda236de416491c3a6f08354e56d7b0c07110"
+  integrity sha512-Ml4xu0R79X1GWYd00rl9cpnczmgmKel+ODIl4Jq0v24H5+7Niji9BSfrM7imwvKJ3t/zkdCPs09QsrId020w2Q==
 
 safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"
