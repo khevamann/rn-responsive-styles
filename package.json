@@ -1,6 +1,6 @@
 {
   "name": "rn-responsive-styles",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "responsive styles for react-native and react-native-web",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -52,7 +52,7 @@
     "ts-jest": "^27.1.2",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^4.5.4"
+    "typescript": "^5.1.3"
   },
   "peerDependencies": {
     "react-native": ">=0.65.0"

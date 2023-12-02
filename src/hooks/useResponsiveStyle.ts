@@ -19,9 +19,7 @@ const composeMultipleStyles = <Styles>(
   // Base cases to return the style if there are not two for a composition
   if (classNames.length === 1) return styles[classNames[0]]
 
-  // Recursively combine the rest of the styles
-  const nextIteration = composeMultipleStyles(styles, classNames.slice(1))
-  return StyleSheet.compose(styles[classNames[0]], nextIteration)
+  return classNames.map((className) => styles[className])
 }
 
 const buildCustomStyleMap = (styles: StyleSheet.NamedStyles<any>, size: DEVICE_SIZES) => {
