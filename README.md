@@ -113,7 +113,7 @@ const useStyles = CreateResponsiveStyle(
 The currently configured breakpoints are:
 
 |    Size     |               Value               |     Shorthand     |      Breakpoints      |
-|:-----------:|:---------------------------------:|:-----------------:|:---------------------:|
+| :---------: | :-------------------------------: | :---------------: | :-------------------: |
 | extra small | `DEVICE_SIZES.EXTRA_SMALL_DEVICE` | `DEVICE_SIZES.XS` |    `width <= 540`     |
 |    small    |    `DEVICE_SIZES.SMALL_DEVICE`    | `DEVICE_SIZES.SM` | `540 < width <= 768`  |
 |   medium    |   `DEVICE_SIZES.MEDIUM_DEVICE`    | `DEVICE_SIZES.MD` | `768 < width <= 992`  |
@@ -140,8 +140,6 @@ export default function App() {
 
 ## Support for Next.js
 
-:sparkles:Available in 2.1.0:sparkles:
-
 NextJS provides server-side-rendering (SSR) for react-native-web projects. This library supports that by delaying
 rendering until it has reached the client, this is a similar approach used by many other packages, as there is no way to
 know the device size in the server, so responsive styles are meaningless. In order to support SSR you must add this
@@ -161,21 +159,4 @@ export default function App() {
 }
 ```
 
-* You can see the full example in the nexpo-example directory
-
-
-# Upgrading to V2 (from V1)
-
-V2 provides some very useful features like advanced typechecking as well as a more familiar syntax. Instead of using
-functions to call styles, you can simply call them the same way you would normally. This means to gradually adopt this
-library it is as simple as replacing `const styles = Stylesheet.create` with `const useStyles = CreateResponsiveStyles`
-and adding `const styles = useStyles()` inside your component. With this update typechecking will now verify that styles
-are used for appropriate components and that no css only styles are used. In addition, there is support for custom
-breakpoints.
-
-**To upgrade:**
-
-1. Replace `const { styles } = useStyles()` with `const styles = useStyles()`
-2. Replace all styling calls from `styles('container)` to `styles.container`
-3. If you have been using `deviceSize` it is now a standalone hook `const deviceSize = useDeviceSize()`
-
+- You can see the full example in the nexpo-example directory
