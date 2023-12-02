@@ -22,14 +22,12 @@ exports[`tests that device sizes render appropriately tests that extra large dev
         Object {
           "color": "white",
         },
-        Array [
-          Object {
-            "color": "black",
-          },
-          Object {
-            "fontSize": 30,
-          },
-        ],
+        Object {
+          "color": "black",
+        },
+        Object {
+          "fontSize": 30,
+        },
       ]
     }
   >
@@ -42,14 +40,12 @@ exports[`tests that device sizes render appropriately tests that extra large dev
         Object {
           "color": "white",
         },
-        Array [
-          Object {
-            "color": "black",
-          },
-          Object {
-            "fontSize": 30,
-          },
-        ],
+        Object {
+          "color": "black",
+        },
+        Object {
+          "fontSize": 30,
+        },
       ]
     }
   >
