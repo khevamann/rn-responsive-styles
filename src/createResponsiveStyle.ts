@@ -27,10 +27,10 @@ function CreateResponsiveStyle<
   //   container: {
   //     color: 'red'
   //   },
-  //   large_container: {
+  //   $$large$$_container: {
   //     color: 'blue'
   //   },
-  //   extrasmall+small_container: {
+  //   $$extrasmall+small$$_container: {
   //     color: 'green'
   //   },
   // }
