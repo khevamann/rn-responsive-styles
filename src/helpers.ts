@@ -1,7 +1,7 @@
 import { DEVICE_SIZES, MEDIA_QUERY } from './types'
 
 // Used to determine what sizes should be included in media queries
-const sizeOrder = [
+export const sizeOrder = [
   DEVICE_SIZES.EXTRA_SMALL_DEVICE,
   DEVICE_SIZES.SMALL_DEVICE,
   DEVICE_SIZES.MEDIUM_DEVICE,

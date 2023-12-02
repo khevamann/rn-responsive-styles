@@ -56,6 +56,9 @@ exports[`tests that device sizes render appropriately tests that extra large dev
     Color: 
     orange
   </Text>
+  <Text>
+    Only rendered for devices larger than medium
+  </Text>
 </View>
 `;
 
@@ -99,6 +102,9 @@ exports[`tests that device sizes render appropriately tests that extra small dev
   >
     Color: 
     purple
+  </Text>
+  <Text>
+    Only rendered for devices smaller than medium
   </Text>
 </View>
 `;
@@ -149,6 +155,9 @@ exports[`tests that device sizes render appropriately tests that large devices r
     Color: 
     blue
   </Text>
+  <Text>
+    Only rendered for devices larger than medium
+  </Text>
 </View>
 `;
 
@@ -198,6 +207,9 @@ exports[`tests that device sizes render appropriately tests that medium devices 
     Color: 
     green
   </Text>
+  <Text>
+    Only rendered for medium devices
+  </Text>
 </View>
 `;
 
@@ -246,6 +258,9 @@ exports[`tests that device sizes render appropriately tests that small devices r
   >
     Color: 
     red
+  </Text>
+  <Text>
+    Only rendered for devices smaller than medium
   </Text>
 </View>
 `;
