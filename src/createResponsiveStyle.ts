@@ -4,10 +4,7 @@ import useResponsiveStyle from './hooks/useResponsiveStyle'
 
 type ReturnType<GlobalStyles> = () => GlobalStyles
 
-function CreateResponsiveStyle<
-  DefaultStyles extends StyleSheet.NamedStyles<DefaultStyles>,
-  OverrideStyles extends DefaultStyles
->(
+function CreateResponsiveStyle<DefaultStyles extends StyleSheet.NamedStyles<any>, OverrideStyles extends DefaultStyles>(
   webStyles: DefaultStyles,
   styleOverrides?: Record<DEVICE_SIZES | MEDIA_QUERY, Partial<StyleSheet.NamedStyles<OverrideStyles>>>
 ): ReturnType<DefaultStyles> {

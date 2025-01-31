@@ -7999,10 +7999,9 @@ rimraf@~2.6.2:
   dependencies:
     glob "^7.1.3"
 
-rn-responsive-styles@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/rn-responsive-styles/-/rn-responsive-styles-2.2.0.tgz#726cda236de416491c3a6f08354e56d7b0c07110"
-  integrity sha512-Ml4xu0R79X1GWYd00rl9cpnczmgmKel+ODIl4Jq0v24H5+7Niji9BSfrM7imwvKJ3t/zkdCPs09QsrId020w2Q==
+"rn-responsive-styles@link:../lib":
+  version "0.0.0"
+  uid ""
 
 run-parallel@^1.1.9:
   version "1.2.0"
