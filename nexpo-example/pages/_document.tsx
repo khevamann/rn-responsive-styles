@@ -19,6 +19,7 @@ export default class MyDocument extends Document {
     // @ts-expect-error: getApplication is a react-native-web prop
     const { getStyleElement } = AppRegistry.getApplication(config.name)
     const page = await renderPage()
+    // eslint-disable-next-line react/jsx-key
     const styles = [<style dangerouslySetInnerHTML={{ __html: normalizeNextElements }} />, getStyleElement()]
     return { ...page, styles: Children.toArray(styles) }
   }
