@@ -15,21 +15,21 @@ export default function useSizeRender() {
       const sizeIndex = sizeOrder.indexOf(size)
       return currSizeIndex < sizeIndex
     },
-    [currSize]
+    [currSizeIndex]
   )
   const isLargerThan = useCallback(
     (size: DEVICE_SIZES) => {
       const sizeIndex = sizeOrder.indexOf(size)
       return currSizeIndex > sizeIndex
     },
-    [currSize]
+    [currSizeIndex]
   )
   const isSize = useCallback(
     (size: DEVICE_SIZES) => {
       const sizeIndex = sizeOrder.indexOf(size)
       return currSizeIndex === sizeIndex
     },
-    [currSize]
+    [currSizeIndex]
   )
 
   return useMemo(() => ({ isSmallerThan, isLargerThan, isSize }), [isSmallerThan, isLargerThan, isSize])

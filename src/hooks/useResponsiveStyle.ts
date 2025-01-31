@@ -41,6 +41,7 @@ const buildCustomStyleMap = (styles: StyleSheet.NamedStyles<any>, size: DEVICE_S
 
 export default function useResponsiveStyle<Styles extends StyleSheet.NamedStyles<Styles>>(styles: Styles) {
   return () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const size = useDeviceSize()
 
     return buildCustomStyleMap(styles, size)

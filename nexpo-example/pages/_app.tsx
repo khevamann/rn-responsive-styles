@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* eslint-disable-next-line react-native/no-raw-text */}
         <title>rn-responsive-styles Nexpo Example</title>
       </Head>
       <Component {...pageProps} />

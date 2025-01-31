@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { DEVICE_SIZES, maxSize, minSize } from '../src'
 
 describe('test that min and max sizes work correctly', () => {

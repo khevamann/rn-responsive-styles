@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-duplicate-enum-values */
+
 export type MEDIA_QUERY = string
 
 export enum DEVICE_SIZES {
